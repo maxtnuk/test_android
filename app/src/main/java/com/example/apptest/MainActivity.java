@@ -1,5 +1,6 @@
 package com.example.apptest;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -26,9 +27,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String content=binding.editText.getText().toString();
-                itemAdapter.addItem(content);
-                binding.editText.setText("");
-                itemAdapter.notifyDataSetChanged();
+//                itemAdapter.addItem(content);
+//                binding.editText.setText("");
+//                itemAdapter.notifyDataSetChanged();
+                Intent intent = new Intent(MainActivity.this,SubActivity.class);
+                Bundle bundle= new Bundle();
+                bundle.putString("name",content);
+                intent.putExtras(bundle);
+                startActivity(intent);
             }
         });
 
