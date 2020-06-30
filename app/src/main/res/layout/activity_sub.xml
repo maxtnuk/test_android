@@ -1,18 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SubActivity">
-    <TextView
-        android:id="@+id/sub_text"
+    tools:context=".ui.SubActivity">
+    <LinearLayout
+        android:id="@+id/activity_title"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:text="hello"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Book Detail"
+            android:textSize="30sp"
+            android:textColor="@android:color/black"
+            />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        tools:viewBindingIgnore="true"
+        android:orientation="vertical"
+        android:id="@+id/guide_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.2"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        tools:viewBindingIgnore="true"
+        app:layout_constraintGuide_percent="0.0"
+        android:id="@+id/title_line"
+        android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/name"
+        app:layout_constraintTop_toBottomOf="@id/activity_title"
+        app:layout_constraintStart_toStartOf="@id/title_line"
+        app:layout_constraintEnd_toStartOf="@id/name_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:text="@string/book_name" />
+
+    <TextView
+        android:paddingHorizontal="10dp"
+        android:id="@+id/name_content"
+        app:layout_constraintTop_toTopOf="@id/name"
+        app:layout_constraintStart_toStartOf="@id/guide_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:text="test" />
+
+    <TextView
+        android:id="@+id/description"
+        app:layout_constraintTop_toBottomOf="@id/name_content"
+        app:layout_constraintStart_toStartOf="@id/title_line"
+        app:layout_constraintEnd_toStartOf="@id/description_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:text="@string/book_description" />
+
+    <TextView
+        android:paddingHorizontal="10dp"
+        android:id="@+id/description_content"
+        app:layout_constraintTop_toTopOf="@id/description"
+        app:layout_constraintStart_toStartOf="@id/guide_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:text="test" />
+
+    <TextView
+        android:id="@+id/price"
+        app:layout_constraintTop_toBottomOf="@id/description_content"
+        app:layout_constraintStart_toStartOf="@id/title_line"
+        app:layout_constraintEnd_toStartOf="@id/price_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:text="@string/book_price" />
+
+    <TextView
+        android:paddingHorizontal="10dp"
+        android:id="@+id/price_content"
+        app:layout_constraintTop_toTopOf="@id/price"
+        app:layout_constraintStart_toStartOf="@id/guide_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:text="test" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

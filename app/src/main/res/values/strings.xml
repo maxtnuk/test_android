@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">AppTest</string>
+    <string name="book_name">책 이름</string>
+    <string name="book_description">설명</string>
+    <string name="book_price">가격</string>
+
 </resources>

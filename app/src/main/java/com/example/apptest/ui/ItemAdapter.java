@@ -1,4 +1,4 @@
-package com.example.apptest;
+package com.example.apptest.ui;
 
 import android.view.LayoutInflater;
 import android.view.View;
